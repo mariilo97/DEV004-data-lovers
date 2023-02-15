@@ -1,6 +1,10 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import { pokemon } from './data.js';
+//No lo podemos borrar
+import data from './data/pokemon/pokemon.js'; 
 
-console.log(example, data);
+
+console.log(pokemon, data);
+document.getElementById("root").innerHTML = pokemon; 
+
+//const jsonPokemon=JSON.parse(name);
+//console.log(typeof jsonPokemon);
