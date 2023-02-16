@@ -1,0 +1,14 @@
+body{
+    background-color:  rgb(19, 48, 73);
+}
+
+.contenedorVistaPokemon{
+    background-color: rgb(33, 58, 80) ;
+    border-radius: 5%;
+    display: flexbox | inline-flex;
+    font-size: 18px; /*tamaño letra*/
+    font-family: "sans-serif", sans-serif;
+    color: rgb(253, 250, 250); /*color texto*/
+    text-align: center;
+
+}
