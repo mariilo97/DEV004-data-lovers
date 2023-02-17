@@ -6,7 +6,7 @@ const arregloPokemon = datos.pokemon.slice(0,18)
 
 const vistaPokemon = document.getElementById('vistaPokemon')
  function mostrarTarjetas(arregloPokemon){
-    console.log(arregloPokemon);
+    /*console.log(arregloPokemon);*/
     for(let i = 0; i < arregloPokemon.length; i++){
      vistaPokemon.innerHTML += `<article>
      <h1>${arregloPokemon[i].name}</h1> 
@@ -22,6 +22,7 @@ const vistaPokemon = document.getElementById('vistaPokemon')
        h1.textContent = arregloPokemon[i].name
        vistaPokemon.appendChild(h1)*/
     }
+    console.log(arregloPokemon[1]);
     
     };
 
