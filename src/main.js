@@ -1,5 +1,3 @@
-
-
 //No lo podemos borrar
 import datos from './data/pokemon/pokemon.js'; 
 const arregloPokemon = datos.pokemon.slice(0,18)
