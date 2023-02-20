@@ -1,6 +1,6 @@
 //No lo podemos borrar
 import datos from './data/pokemon/pokemon.js'; 
-const arregloPokemon = datos.pokemon.slice(0,18)
+const arregloPokemon = datos.pokemon.slice(0,28)
 
 const vistaPokemon = document.getElementById('vistaPokemon')
 function mostrarTarjetas(arregloPokemon){
