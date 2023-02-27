@@ -1,8 +1,11 @@
 import datos from "./data/pokemon/pokemon.js";
-const arregloPokemon = datos.pokemon.slice(0,19);
+import { filtrarTarjetas } from "./data.js";
+const arregloPokemon = datos.pokemon;
 
 const vistaPokemon = document.getElementById("vistaPokemon");
+
 function mostrarTarjetas(arregloPokemon) {
+  vistaPokemon.innerHTML= ''
   for (let i = 0; i < arregloPokemon.length; i++) {
     vistaPokemon.innerHTML += `<article>
     <h1>${arregloPokemon[i].name}</h1> 
@@ -13,34 +16,17 @@ function mostrarTarjetas(arregloPokemon) {
     <h5>${arregloPokemon[i].resistant}</h5>
     <h6>${arregloPokemon[i].num}</h6>
   </article>`;
-
-  const tipos = (`${arregloPokemon[i].type}`);
-  const totalTipos = [
-    {type:'normal'},
-    {type:'fire'},
-    {type:'water'}
-  ]; 
-  console.log(tipos)
-  console.log(totalTipos)
   }
 }
 
-const filtroPokemon = document.getElementById("filtrarPokemon");
-function filtrarTarjetas(arregloPokemon) {
-  for (let i = 0; i < arregloPokemon.length; i++) {
-    vistaPokemon.innerHTML += `<article>      
-    <h3>${arregloPokemon[i].type}<h3/>
-  </article>`;
+const selectType = document.getElementById("types");
+selectType.addEventListener('change', function(){
+  const type = selectType.value
+console.log(selectType.value)
+const pokemonsFiltrados= filtrarTarjetas(arregloPokemon, type ); // invocamos para ver el resultado
+console.log(pokemonsFiltrados)
+mostrarTarjetas(pokemonsFiltrados)
 
-  const tipos = (`${arregloPokemon[i].type}`);
-  /*const totalTipos = [
-    {type:'normal'},
-    {type:'fire'},
-    {type:'water'}
-  ]; */
-  console.log(tipos)
-  }
-}
+})
 
 mostrarTarjetas(arregloPokemon);
-filtrarTarjetas(arregloPokemon);

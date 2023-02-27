@@ -8,3 +8,10 @@ export const pokemon = (tarjetas) => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
+export function filtrarTarjetas(arregloPokemon, type) {
+  const result = arregloPokemon.filter(element => element.type.includes(type)) // version corta
+  
+   console.log(result);
+  return result
+};
