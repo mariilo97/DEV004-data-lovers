@@ -1,8 +1,11 @@
 import datos from "./data/pokemon/pokemon.js";
+import { filtrarTarjetas } from "./data.js";
 const arregloPokemon = datos.pokemon;
 
 const vistaPokemon = document.getElementById("vistaPokemon");
+
 function mostrarTarjetas(arregloPokemon) {
+  vistaPokemon.innerHTML= ''
   for (let i = 0; i < arregloPokemon.length; i++) {
     vistaPokemon.innerHTML += `<article>
     <h1>${arregloPokemon[i].name}</h1> 
@@ -15,4 +18,15 @@ function mostrarTarjetas(arregloPokemon) {
   </article>`;
   }
 }
+
+const selectType = document.getElementById("types");
+selectType.addEventListener('change', function(){
+  const type = selectType.value
+console.log(selectType.value)
+const pokemonsFiltrados= filtrarTarjetas(arregloPokemon, type ); // invocamos para ver el resultado
+console.log(pokemonsFiltrados)
+mostrarTarjetas(pokemonsFiltrados)
+
+})
+
 mostrarTarjetas(arregloPokemon);
