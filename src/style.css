@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+body {
+    background-color: rgb(19, 48, 73);
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    width: 100%;
+    margin: auto;
+    background-color: lightgray;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.barra-horizontal{
+    list-style: none;
+    display: flex;
+    color:  rgb(19, 48, 73);
+    font-family: "sans-serif", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+.lista-tipos > li > a{
+    display: block;
+    padding: 5px 15px;
+    color: rgb(253, 250, 250);
+    font-family: "sans-serif", sans-serif;
+    font-size: 14px;
+}
+
+.barra-horizontal > li:hover{
+    background-color: black;
+}
+
+.lista-tipos{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: (0, 0, 0, .5);
+}
+
+.barra-horizontal > li:hover .lista-tipos{
+    display: block;
+}
+
+.lista-tipos > li:hover{
+    background-color: black;
+}
+
+main {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+
+}
+
+aside {
+    width: 20%;
+    position: static;
+}
+
+aside img {
+    width: 100%;
+    height: 100%;
+    position: static;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
+.contenedorVistaPokemon {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    overflow: auto;
+}
+
+article {
+    background-color: rgb(41, 68, 91);
+    width: 300px;
+    border-radius: 5%;
+    font-size: 18px;
+    font-family: "sans-serif", sans-serif;
+    color: rgb(253, 250, 250);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 16px;
+}
+
+footer {
+    background-color: rgba(19, 48, 73);
+    padding: 1em 2em 1em;
+    border: 0px solid rgb(251, 244, 244);
+    font-size: 12px;
+    font-family: "sans-serif", sans-serif;
+    color: rgb(253, 250, 250);
+    text-align: center;
+}
