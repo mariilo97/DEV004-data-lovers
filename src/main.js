@@ -19,11 +19,11 @@ function mostrarTarjetas(arregloPokemon) {
   }
 }
 
-const selectType = document.getElementById("types");
+const selectType = document.getElementById("tipos");
 selectType.addEventListener('change', function(){
-  const type = selectType.value
+const tipoPokemon = selectType.value
 console.log(selectType.value)
-const pokemonsFiltrados= filtrarTarjetas(arregloPokemon, type ); // invocamos para ver el resultado
+const pokemonsFiltrados= filtrarTarjetas(arregloPokemon, tipoPokemon ); // invocamos para ver el resultado
 console.log(pokemonsFiltrados)
 mostrarTarjetas(pokemonsFiltrados)
 
