@@ -1,6 +1,6 @@
 import datos from "./data/pokemon/pokemon.js";
 import { filtrarTarjetas } from "./data.js";
-const arregloPokemon = datos.pokemon;
+const arregloPokemon = datos.pokemon.slice(0,19);
 
 const vistaPokemon = document.getElementById("vistaPokemon");
 
@@ -23,12 +23,12 @@ function mostrarTarjetas(arregloPokemon) {
   }
 }
 
-const selectType = document.getElementById("tipos");
-selectType.addEventListener('change', function(){
-const tipoPokemon = selectType.value
-console.log(selectType.value)
+const seleccionTipo = document.getElementById("tipos");
+seleccionTipo.addEventListener('change', function(){
+const tipoPokemon = seleccionTipo.value
+//console.log(seleccionTipo.value)
 const pokemonsFiltrados= filtrarTarjetas(arregloPokemon, tipoPokemon ); // invocamos para ver el resultado
-console.log(pokemonsFiltrados)
+//console.log(pokemonsFiltrados)
 mostrarTarjetas(pokemonsFiltrados)
 
 })
