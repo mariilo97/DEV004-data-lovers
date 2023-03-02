@@ -78,9 +78,7 @@ describe("ordenarPokemon", () => {
         name: "charmander",
       },
     ];
-    expect(ordenarPokemon(resultOrder, "charmander")).toStrictEqual(
-      resultOrder
-    );
+    expect(ordenarPokemon(resultOrder, "charmander")).toStrictEqual(resultOrder);
   });
   it("returns vacío", () => {
     expect(ordenarPokemon(dataPokemonOrder, "")).toBeFalsy();
