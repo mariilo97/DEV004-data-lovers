@@ -7,6 +7,7 @@ export const anotherExample = () => {
 };
 
 export function filtrarTarjetas(arregloPokemon, type) {
+
   if (type === "") {
     return false;
   }
@@ -40,3 +41,4 @@ export function ordenarPokemon(arregloPokemon, name) {
   }
  
 }
+

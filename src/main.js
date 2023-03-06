@@ -36,9 +36,11 @@ seleccionTipo.addEventListener('change', function(){
 const seleccionOrdenar = document.getElementById("ordenarAlfabeticamente");
 seleccionOrdenar.addEventListener('change', function(){
   const ordenPokemon = seleccionOrdenar.value
+
   //console.log(seleccionOrdenar)
   const pokemonsOrdenados= ordenarPokemon(arregloPokemon, ordenPokemon); // invocamos para ver el resultado
   //console.log(pokemonsOrdenados)
+
   /*const reverseOrden = pokemonsOrdenados.reverse(ordenPokemon);
   console.log("****", reverseOrden)
   mostrarTarjetas(reverseOrden)*/

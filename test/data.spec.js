@@ -1,3 +1,4 @@
+
 import { filtrarTarjetas, ordenarPokemon } from "../src/data.js";
 
 describe("filtrarTarjetas", () => {
@@ -43,6 +44,7 @@ describe("filtrarTarjetas", () => {
     expect(filtrarTarjetas(dataPokemon, "fire")).toStrictEqual(result);
   });
   it("returns vacío", () => {
+
     expect(filtrarTarjetas(dataPokemon, "")).toBeFalsy();
   });
 });
@@ -101,6 +103,7 @@ describe("ordenarPokemon", () => {
   //   expect(ordenarPokemon(dataPokemonOrder, "")).toBeFalsy();
   // });
 });
+
 
 /*describe('anotherExample', () => {
   it('is a function', () => {
