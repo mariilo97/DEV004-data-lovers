@@ -17,10 +17,7 @@ export function filtrarTarjetas(arregloPokemon, type) {
   return result;
 }
 export function ordenarPokemon(arregloPokemon, name) {
-  if (name === "") {
-    return false;
-  }
-  arregloPokemon.sort((a, b) => {
+  const arraySort = arregloPokemon.sort((a, b) => {
     if (a.name > b.name) {
       return 1;
     }
@@ -29,6 +26,17 @@ export function ordenarPokemon(arregloPokemon, name) {
     }
     return 0;
   });
-
-  return arregloPokemon;
+  if (name === "") {
+    return false;
+  }
+  else if (name === 'ordenar'){
+    
+  
+    return arraySort;
+  }
+  else {
+  
+    return arraySort.reverse()
+  }
+ 
 }

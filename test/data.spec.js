@@ -52,37 +52,54 @@ describe("ordenarPokemon", () => {
     expect(typeof ordenarPokemon).toBe("function");
   });
 
-  const dataPokemonOrder = [
+  const aOrdenar = [
     {
       num: "001",
       name: "bulbasaur",
-    },
-    {
-      num: "004",
-      name: "charmander",
     },
     { num: "022", name: "fearow" },
     {
       num: "013",
       name: "weedle",
+
     },
+    
+    {
+      num: "004",
+      name: "charmander",},
     {
       num: "056",
       name: "mankey",
-    },
+    }
   ];
   it("returns order", () => {
-    const resultOrder = [
+    const ordenado = [
+      {
+        num: "001",
+        name: "bulbasaur",
+      },
       {
         num: "004",
         name: "charmander",
       },
+      { num: "022", name: "fearow" },
+      {
+        num: "056",
+        name: "mankey",
+      },
+      {
+        num: "013",
+        name: "weedle",
+      }
     ];
-    expect(ordenarPokemon(resultOrder, "charmander")).toStrictEqual(resultOrder);
+
+    expect(ordenarPokemon(aOrdenar, "ordenar")).toStrictEqual(ordenado);
+    expect(ordenarPokemon(aOrdenar, "reversa")).toStrictEqual(ordenado.reverse());
+    expect(ordenarPokemon(aOrdenar, "")).toBeFalsy()
   });
-  it("returns vacío", () => {
-    expect(ordenarPokemon(dataPokemonOrder, "")).toBeFalsy();
-  });
+  // it("returns vacío", () => {
+  //   expect(ordenarPokemon(dataPokemonOrder, "")).toBeFalsy();
+  // });
 });
 
 /*describe('anotherExample', () => {
