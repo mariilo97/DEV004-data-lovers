@@ -1,14 +1,55 @@
-export const pokemon = (tarjetas) => {
-  return 'pokemon';
-};
-
+//export const pokemon = (tarjetas) => {
+// return 'pokemon';
+//};
 
 export const anotherExample = () => {
-  return 'OMG';
+  return "OMG";
 };
 
 export function filtrarTarjetas(arregloPokemon, type) {
-  const result = arregloPokemon.filter(element => element.type.includes(type)) // version corta
+
+  if (type === "") {
+    return false;
+  }
+  const result = arregloPokemon.filter((element) =>
+    element.type.includes(type)
+  ); // version corta
+
+  return result;
+}
+export function ordenarPokemon(arregloPokemon, name) {
+  const arraySort = arregloPokemon.sort((a, b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+    return 0;
+  });
+  if (name === "") {
+    return false;
+  }
+  else if (name === 'ordenar'){
+    
   
-  return result
-};
+    return arraySort;
+  }
+  else {
+  
+    return arraySort.reverse()
+  }
+}
+
+export function mejoresPokemon(arregloPokemon){
+  // for (let index = 0; index < arregloPokemon.length; index++) {
+  //   console.log(arregloPokemon[index].stats['max-cp']);
+    
+  // }
+  arregloPokemon.forEach((element)=>{
+    console.log(element.stats['max-cp']);
+  })
+
+}
+
+
