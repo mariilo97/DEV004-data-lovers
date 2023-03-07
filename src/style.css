@@ -42,18 +42,20 @@ nav{
     background-color: rgb(44, 241, 22);
     color: rgb(19, 48, 73);
     font-family: "sans-serif", sans-serif;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     border-radius: 5%;
     display: inline-block; 
     
 }
 
-#ordenarAlfabeticamente, #botonInicio{
+#ordenarAlfabeticamente, #botonInicio, #top{
     padding: 5px 15px;
     color: rgb(19, 48, 73);
     border: 0ch;
     font-family: "sans-serif", sans-serif;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     border-radius: 5%;
     display: inline-block; 
     
