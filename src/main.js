@@ -1,6 +1,6 @@
 import datos from "./data/pokemon/pokemon.js";
 import { filtrarTarjetas, ordenarPokemon } from "./data.js";
-const arregloPokemon = datos.pokemon.slice(0,19);
+const arregloPokemon = datos.pokemon;
 
 const vistaPokemon = document.getElementById("vistaPokemon");
 
@@ -36,10 +36,11 @@ seleccionTipo.addEventListener('change', function(){
 const seleccionOrdenar = document.getElementById("ordenarAlfabeticamente");
 seleccionOrdenar.addEventListener('change', function(){
   const ordenPokemon = seleccionOrdenar.value
+  console.log(ordenPokemon);
 
   //console.log(seleccionOrdenar)
   const pokemonsOrdenados= ordenarPokemon(arregloPokemon, ordenPokemon); // invocamos para ver el resultado
-  //console.log(pokemonsOrdenados)
+  console.log(pokemonsOrdenados)
 
   /*const reverseOrden = pokemonsOrdenados.reverse(ordenPokemon);
   console.log("****", reverseOrden)

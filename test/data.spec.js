@@ -63,12 +63,12 @@ describe("ordenarPokemon", () => {
     {
       num: "013",
       name: "weedle",
-
     },
     
     {
       num: "004",
-      name: "charmander",},
+      name: "charmander",
+    },
     {
       num: "056",
       name: "mankey",
