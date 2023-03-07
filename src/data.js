@@ -39,6 +39,17 @@ export function ordenarPokemon(arregloPokemon, name) {
   
     return arraySort.reverse()
   }
- 
 }
+
+export function mejoresPokemon(arregloPokemon){
+  // for (let index = 0; index < arregloPokemon.length; index++) {
+  //   console.log(arregloPokemon[index].stats['max-cp']);
+    
+  // }
+  arregloPokemon.forEach((element)=>{
+    console.log(element.stats['max-cp']);
+  })
+
+}
+
 

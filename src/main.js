@@ -1,6 +1,6 @@
 import datos from "./data/pokemon/pokemon.js";
-import { filtrarTarjetas, ordenarPokemon } from "./data.js";
-const arregloPokemon = datos.pokemon;
+import { filtrarTarjetas, ordenarPokemon, mejoresPokemon } from "./data.js";
+const arregloPokemon = datos.pokemon.slice(0,19);
 
 const vistaPokemon = document.getElementById("vistaPokemon");
 
@@ -40,15 +40,28 @@ seleccionOrdenar.addEventListener('change', function(){
 
   //console.log(seleccionOrdenar)
   const pokemonsOrdenados= ordenarPokemon(arregloPokemon, ordenPokemon); // invocamos para ver el resultado
-  console.log(pokemonsOrdenados)
+  //console.log(pokemonsOrdenados)
 
-  /*const reverseOrden = pokemonsOrdenados.reverse(ordenPokemon);
-  console.log("****", reverseOrden)
-  mostrarTarjetas(reverseOrden)*/
+
   mostrarTarjetas(pokemonsOrdenados)
+
+});
+
+const topPokemon = document.getElementById("top");
+topPokemon.addEventListener('click', function(){
+  const bestPokemon = topPokemon.value
+  console.log(bestPokemon);
+
+  //console.log(topPokemon)
+  const pokemonsTop= mejoresPokemon(arregloPokemon);
+
+  //mostrarTarjetas(pokemonsTop)
 
 })
 
 
 
 mostrarTarjetas(arregloPokemon);
+
+/*const button = document.getElementById("btnValidate");
+button.addEventListener("click", validate);*/
