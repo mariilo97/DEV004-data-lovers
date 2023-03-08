@@ -61,6 +61,11 @@ nav{
     
 }
 
+#parrafoTop{
+    text-align: center;
+    
+}
+
 .barra-horizontal > li:hover{
     background-color: black;
 }

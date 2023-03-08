@@ -13,7 +13,9 @@
 
   <nav>
     <ul class="barra-horizontal">
-      <li><input id="botonInicio" type="button" value="Inicio" onclick="location.reload()"/></li>
+      <li>
+      <input id="botonInicio" type="button" value="Inicio" onclick="location.reload()"/>
+      </li>
       <li>
         <select id="ordenarAlfabeticamente">
           <option disabled selected>Ordenar</option>
@@ -23,7 +25,9 @@
 
         </select>
       </li>
-      <li><a href=""></a><button  id="top" onclick="">Top Best Fighting Pokémon</button></li>
+      <li id="parrafoTop"><a href=""></a><button  id="top" onclick="">Best Pokémon</button>
+      <p><input type="text" placeholder="Escoje tu primer Pokémon"> vs <input type="" placeholder="Escoje tu segundo Pokémon"></p>
+      </li>
       <li>
         <select id="tipos">
           <option disabled selected>Pick a Type</option>
@@ -58,6 +62,7 @@
     <section class="contenedorVistaPokemon" id="vistaPokemon">
     </section>
     <section id="filtrarPokemon"></section>
+
     
   </main>
 
