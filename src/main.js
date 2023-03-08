@@ -37,6 +37,7 @@ const seleccionOrdenar = document.getElementById("ordenarAlfabeticamente");
 seleccionOrdenar.addEventListener('change', function(){
   const ordenPokemon = seleccionOrdenar.value
   console.log(ordenPokemon);
+  
 
   //console.log(seleccionOrdenar)
   const pokemonsOrdenados= ordenarPokemon(arregloPokemon, ordenPokemon); // invocamos para ver el resultado
@@ -49,10 +50,15 @@ seleccionOrdenar.addEventListener('change', function(){
 
 const topPokemon = document.getElementById("top");
 topPokemon.addEventListener('click', function(){
-  const bestPokemon = topPokemon.value
-  console.log(bestPokemon);
+  /*const bestPokemon = topPokemon.value
+  console.log(bestPokemon);*/
 
-  //console.log(topPokemon)
+ const pokemon1 = document.getElementById('pick1').value;
+ pokemon1.addEventListener('click', mejoresPokemon)
+document.getElementById('pick2').value;
+console.log(pokemon1)
+
+
   const pokemonsTop= mejoresPokemon(arregloPokemon);
 
   //mostrarTarjetas(pokemonsTop)

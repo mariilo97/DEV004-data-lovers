@@ -61,9 +61,9 @@ nav{
     
 }
 
-#parrafoTop{
+#parrafoTop, input{
     text-align: center;
-    
+
 }
 
 .barra-horizontal > li:hover{
