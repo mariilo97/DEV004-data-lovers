@@ -1,6 +1,6 @@
 import datos from "./data/pokemon/pokemon.js";
 import { filtrarTarjetas, ordenarPokemon, mejoresPokemon } from "./data.js";
-const arregloPokemon = datos.pokemon.slice(0,19);
+const arregloPokemon = datos.pokemon;
 
 const vistaPokemon = document.getElementById("vistaPokemon");
 
@@ -26,9 +26,7 @@ function mostrarTarjetas(arregloPokemon) {
 const seleccionTipo = document.getElementById("tipos");
 seleccionTipo.addEventListener('change', function(){
   const tipoPokemon = seleccionTipo.value
-  //console.log(seleccionTipo.value)
   const pokemonsFiltrados= filtrarTarjetas(arregloPokemon, tipoPokemon ); // invocamos para ver el resultado
-  //console.log(pokemonsFiltrados)
   mostrarTarjetas(pokemonsFiltrados)
 
 });
@@ -36,32 +34,16 @@ seleccionTipo.addEventListener('change', function(){
 const seleccionOrdenar = document.getElementById("ordenarAlfabeticamente");
 seleccionOrdenar.addEventListener('change', function(){
   const ordenPokemon = seleccionOrdenar.value
-  console.log(ordenPokemon);
-  
-
-  //console.log(seleccionOrdenar)
   const pokemonsOrdenados= ordenarPokemon(arregloPokemon, ordenPokemon); // invocamos para ver el resultado
-  //console.log(pokemonsOrdenados)
-
-
   mostrarTarjetas(pokemonsOrdenados)
 
 });
 
 const topPokemon = document.getElementById("top");
 topPokemon.addEventListener('click', function(){
-  /*const bestPokemon = topPokemon.value
-  console.log(bestPokemon);*/
-
- const pokemon1 = document.getElementById('pick1').value;
- pokemon1.addEventListener('click', mejoresPokemon)
-document.getElementById('pick2').value;
-console.log(pokemon1)
-
-
-  const pokemonsTop= mejoresPokemon(arregloPokemon);
-
-  //mostrarTarjetas(pokemonsTop)
+const bestPokemon = topPokemon.value
+const pokemonsTop= mejoresPokemon(arregloPokemon, bestPokemon);
+//mostrarTarjetas(pokemonsTop)
 
 })
 

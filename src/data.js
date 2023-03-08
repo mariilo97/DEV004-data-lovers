@@ -46,8 +46,6 @@ export function mejoresPokemon(arregloPokemon){
   //   console.log(arregloPokemon[index].stats['max-cp']);
     
   // }
-  let pokemon1 = [];
-  let pokemon2 = [];
   arregloPokemon.forEach((element)=>{
     const ataque= element.stats['base-attack'];
     const defensa= element.stats['base-defense'];
@@ -55,18 +53,13 @@ export function mejoresPokemon(arregloPokemon){
     const maxCP= element.stats['max-cp']; 
     const maxHP= element.stats['max-hp'];
     const suma = (Number (ataque)) + (Number (defensa)) + (Number (resistencia))+ (Number (maxCP)) + (Number (maxHP));
-
-    if(pokemon1 > pokemon2){
-      return pokemon1
+    const promedio = suma / 5;
+console.log(promedio)
+  if (promedio >= 700){
+      return true
+    } else {
+      return false
     }
-    if (pokemon1 < pokemon2){
-      return pokemon2
-    }else if (pokemon1 === pokemon2){
-    return pokemon1 && pokemon2
-    }
-    console.log(element.stats)
-    console.log(suma)
-
   })
 
 }
