@@ -1,6 +1,6 @@
 import datos from "./data/pokemon/pokemon.js";
 import { filtrarTarjetas, ordenarPokemon, mejoresPokemon } from "./data.js";
-const arregloPokemon = datos.pokemon;
+const arregloPokemon = datos.pokemon.slice(0,49);
 
 const vistaPokemon = document.getElementById("vistaPokemon");
 
@@ -26,7 +26,9 @@ function mostrarTarjetas(arregloPokemon) {
 const seleccionTipo = document.getElementById("tipos");
 seleccionTipo.addEventListener('change', function(){
   const tipoPokemon = seleccionTipo.value
+  //console.log(seleccionTipo.value)
   const pokemonsFiltrados= filtrarTarjetas(arregloPokemon, tipoPokemon ); // invocamos para ver el resultado
+  //console.log(pokemonsFiltrados)
   mostrarTarjetas(pokemonsFiltrados)
 
 });
@@ -35,6 +37,10 @@ const seleccionOrdenar = document.getElementById("ordenarAlfabeticamente");
 seleccionOrdenar.addEventListener('change', function(){
   const ordenPokemon = seleccionOrdenar.value
   const pokemonsOrdenados= ordenarPokemon(arregloPokemon, ordenPokemon); // invocamos para ver el resultado
+  console.log(pokemonsOrdenados)
+  /*const reverseOrden = pokemonsOrdenados.reverse(ordenPokemon);
+  console.log("****", reverseOrden)
+  mostrarTarjetas(reverseOrden)*/
   mostrarTarjetas(pokemonsOrdenados)
 
 });

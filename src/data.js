@@ -7,7 +7,6 @@ export const anotherExample = () => {
 };
 
 export function filtrarTarjetas(arregloPokemon, type) {
-
   if (type === "") {
     return false;
   }
@@ -29,39 +28,32 @@ export function ordenarPokemon(arregloPokemon, name) {
   });
   if (name === "") {
     return false;
-  }
-  else if (name === 'ordenar'){
-    
-  
+  } else if (name === "ordenar") {
     return arraySort;
-  }
-  else {
-  
-    return arraySort.reverse()
+  } else {
+    return arraySort.reverse();
   }
 }
 
-export function mejoresPokemon(arregloPokemon){
+export function mejoresPokemon(arregloPokemon) {
   // for (let index = 0; index < arregloPokemon.length; index++) {
   //   console.log(arregloPokemon[index].stats['max-cp']);
-    
+
   // }
-  arregloPokemon.forEach((element)=>{
-    const ataque= element.stats['base-attack'];
-    const defensa= element.stats['base-defense'];
-    const resistencia= element.stats['base-stamina'];
-    const maxCP= element.stats['max-cp']; 
-    const maxHP= element.stats['max-hp'];
-    const suma = (Number (ataque)) + (Number (defensa)) + (Number (resistencia))+ (Number (maxCP)) + (Number (maxHP));
+  arregloPokemon.forEach((element) => {
+    const suma =
+      Number(element.stats["base-attack"]) +
+      Number(element.stats["base-defense"]) +
+      Number(element.stats["base-stamina"]) +
+      Number(element.stats["max-cp"]) +
+      Number(element.stats["max-hp"]);
     const promedio = suma / 5;
-console.log(promedio)
-  if (promedio >= 700){
-      return true
+    console.log(promedio);
+    console.log(element);
+    /*if (promedio >= 700) {
+      return true;
     } else {
-      return false
-    }
-  })
-
+      return false;
+    }*/
+  });
 }
-
-
