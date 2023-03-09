@@ -1,7 +1,3 @@
-//export const pokemon = (tarjetas) => {
-// return 'pokemon';
-//};
-
 export const anotherExample = () => {
   return "OMG";
 };
@@ -42,26 +38,21 @@ export function ordenarPokemon(arregloPokemon, name) {
 }
 
 export function mejoresPokemon(arregloPokemon){
-  // for (let index = 0; index < arregloPokemon.length; index++) {
-  //   console.log(arregloPokemon[index].stats['max-cp']);
-    
-  // }
-  arregloPokemon.forEach((element)=>{
-    const ataque= element.stats['base-attack'];
-    const defensa= element.stats['base-defense'];
-    const resistencia= element.stats['base-stamina'];
-    const maxCP= element.stats['max-cp']; 
-    const maxHP= element.stats['max-hp'];
-    const suma = (Number (ataque)) + (Number (defensa)) + (Number (resistencia))+ (Number (maxCP)) + (Number (maxHP));
+  const topPokemon = arregloPokemon.filter((element)=>{
+    const suma =
+    Number(element.stats["base-attack"]) +
+    Number(element.stats["base-defense"]) +
+    Number(element.stats["base-stamina"]) +
+    Number(element.stats["max-cp"]) +
+    Number(element.stats["max-hp"]);
     const promedio = suma / 5;
-console.log(promedio)
-  if (promedio >= 700){
+  if (promedio >= 840){
+    console.log(true)
       return true
     } else {
+      console.log(false)
       return false
     }
   })
-
-}
-
-
+   return topPokemon
+};

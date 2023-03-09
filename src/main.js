@@ -43,7 +43,7 @@ const topPokemon = document.getElementById("top");
 topPokemon.addEventListener('click', function(){
 const bestPokemon = topPokemon.value
 const pokemonsTop= mejoresPokemon(arregloPokemon, bestPokemon);
-//mostrarTarjetas(pokemonsTop)
+mostrarTarjetas(pokemonsTop)
 
 })
 
