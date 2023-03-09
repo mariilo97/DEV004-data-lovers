@@ -1,18 +1,10 @@
-//export const pokemon = (tarjetas) => {
-// return 'pokemon';
-//};
-
-export const anotherExample = () => {
-  return "OMG";
-};
-
 export function filtrarTarjetas(arregloPokemon, type) {
   if (type === "") {
     return false;
   }
   const result = arregloPokemon.filter((element) =>
     element.type.includes(type)
-  ); // version corta
+  );
 
   return result;
 }
@@ -36,11 +28,8 @@ export function ordenarPokemon(arregloPokemon, name) {
 }
 
 export function mejoresPokemon(arregloPokemon) {
-  // for (let index = 0; index < arregloPokemon.length; index++) {
-  //   console.log(arregloPokemon[index].stats['max-cp']);
+  const topPokemon = arregloPokemon.filter((element) => {
 
-  // }
- const topPokemon=  arregloPokemon.forEach((element) => {
     const suma =
       Number(element.stats["base-attack"]) +
       Number(element.stats["base-defense"]) +
@@ -48,11 +37,12 @@ export function mejoresPokemon(arregloPokemon) {
       Number(element.stats["max-cp"]) +
       Number(element.stats["max-hp"]);
     const promedio = suma / 5;
-      if (promedio >= 850) {
-      return true;
-    } else {
-      return false;
-    } 
-})
-return topPokemon
+    if (promedio >= 840) {
+      return true
+    }
+    else {
+      return false
+    }
+  })
+  return topPokemon
 }
