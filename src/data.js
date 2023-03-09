@@ -49,11 +49,15 @@ export function mejoresPokemon(arregloPokemon) {
       Number(element.stats["max-hp"]);
     const promedio = suma / 5;
     console.log(promedio);
-    console.log(element);
-    /*if (promedio >= 700) {
+    console.log(element.stats);
+    const calculo = ((element) => {
+      if (promedio >= 700) {
       return true;
     } else {
       return false;
-    }*/
-  });
+    } 
+  })
+  return calculo
+  console.log(calculo);
+})
 }
