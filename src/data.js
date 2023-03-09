@@ -1,7 +1,3 @@
-//export const pokemon = (tarjetas) => {
-// return 'pokemon';
-//};
-
 export const anotherExample = () => {
   return "OMG";
 };
@@ -39,6 +35,24 @@ export function ordenarPokemon(arregloPokemon, name) {
   
     return arraySort.reverse()
   }
- 
 }
 
+export function mejoresPokemon(arregloPokemon){
+  const topPokemon = arregloPokemon.filter((element)=>{
+    const suma =
+    Number(element.stats["base-attack"]) +
+    Number(element.stats["base-defense"]) +
+    Number(element.stats["base-stamina"]) +
+    Number(element.stats["max-cp"]) +
+    Number(element.stats["max-hp"]);
+    const promedio = suma / 5;
+  if (promedio >= 840){
+    console.log(true)
+      return true
+    } else {
+      console.log(false)
+      return false
+    }
+  })
+   return topPokemon
+};
