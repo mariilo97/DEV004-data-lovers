@@ -40,7 +40,7 @@ export function mejoresPokemon(arregloPokemon) {
   //   console.log(arregloPokemon[index].stats['max-cp']);
 
   // }
-  arregloPokemon.forEach((element) => {
+ const topPokemon=  arregloPokemon.forEach((element) => {
     const suma =
       Number(element.stats["base-attack"]) +
       Number(element.stats["base-defense"]) +
@@ -48,16 +48,11 @@ export function mejoresPokemon(arregloPokemon) {
       Number(element.stats["max-cp"]) +
       Number(element.stats["max-hp"]);
     const promedio = suma / 5;
-    console.log(promedio);
-    console.log(element.stats);
-    const calculo = ((element) => {
-      if (promedio >= 700) {
+      if (promedio >= 850) {
       return true;
     } else {
       return false;
     } 
-  })
-  return calculo
-  console.log(calculo);
 })
+return topPokemon
 }
