@@ -1,5 +1,4 @@
-
-import { filtrarTarjetas, ordenarPokemon } from "../src/data.js";
+import { filtrarTarjetas, ordenarPokemon, mejoresPokemon } from "../src/data.js";
 
 describe("filtrarTarjetas", () => {
   it("is a function", () => {
@@ -64,7 +63,7 @@ describe("ordenarPokemon", () => {
       num: "013",
       name: "weedle",
     },
-    
+
     {
       num: "004",
       name: "charmander",
@@ -105,11 +104,96 @@ describe("ordenarPokemon", () => {
 });
 
 
-/*describe('anotherExample', () => {
+describe('mejoresPokemon', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof mejoresPokemon).toBe('function');
   });
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  const dataPokemonTop = [
+    {
+      num: "001",
+      name: "bulbasaur",
+      stats: {
+        "base-attack": "118",
+        "base-defense": "111",
+        "base-stamina": "128",
+        "max-cp": "1115",
+        "max-hp": "113"
+      },
+    },
+    {
+      num: "004",
+      name: "charmander",
+      stats: {
+        "base-attack": "116",
+        "base-defense": "93",
+        "base-stamina": "118",
+        "max-cp": "980",
+        "max-hp": "105"
+      },
+    },
+    {
+      num: "130",
+      name: "gyarados",
+      stats: {
+        "base-attack": "237",
+        "base-defense": "186",
+        "base-stamina": "216",
+        "max-cp": "3391",
+        "max-hp": "182"
+      },
+    },
+    {
+      num: "022",
+      name: "fearow",
+      stats: {
+        "base-attack": "182",
+        "base-defense": "133",
+        "base-stamina": "163",
+        "max-cp": "1997",
+        "max-hp": "140"
+      },
+    },
+    {
+      num: "150",
+      name: "mewtwo",
+      stats: {
+        "base-attack": "300",
+        "base-defense": "182",
+        "base-stamina": "214",
+        "max-cp": "4178",
+        "max-hp": "180"
+      }
+    },
+  ];
+  it("return top", () => {
+    const resultado = [
+      {
+        num: "130",
+        name: "gyarados",
+        stats: {
+          "base-attack": "237",
+          "base-defense": "186",
+          "base-stamina": "216",
+          "max-cp": "3391",
+          "max-hp": "182"
+        },
+      },
+      {
+        num: "150",
+        name: "mewtwo",
+        stats: {
+          "base-attack": "300",
+          "base-defense": "182",
+          "base-stamina": "214",
+          "max-cp": "4178",
+          "max-hp": "180"
+        }
+      }
+    ];
+    expect(mejoresPokemon(dataPokemonTop, "mewtwo", "gyarados")).toStrictEqual(resultado);
   });
-});*/
+  /*it("return vacío", () => {
+
+    expect(mejoresPokemon(dataPokemonTop, "")).toBeFalsy();
+  });*/
+})
