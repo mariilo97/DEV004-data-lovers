@@ -55,7 +55,7 @@ Esto con la finalidad de que el usuario pueda tener una referencia exacta a la h
  ![HU4Cálculo](HU4-Calcular-Data.png)
  
 En el proceso de la creación de nuestras historias de usuarios realizamos las pruebas de test, con un requisto mínimo de 70% de statements (sentencias), functions (funciones), lines (líneas), y branches (ramas); pudimos obtener un porcentaje alto, aceptable y satisfactorio. 
- ![PruebasUnitarias](Test-Data-Lovers M&M.png)
+ ![PruebasUnitarias](Test-Data-Lovers-M&M.png)
  
 Sin duda fue un reto muy bonito y enriquecedor la creación de esta pagina pensada en todo momento en el usuario y sus funcionalidades, completas y aptas para ser atractiva y cómoda de utilizar y a la que siempre desees volver si necesitas recordar la información.
 También tomamos en cuenta nuestros Feedback y creamos collages con cada uno de ellos, con la finalidad de tenerlos presente en el avance del proyecto y a la hora de realizar cambios reales y necesarios.
