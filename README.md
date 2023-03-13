@@ -19,7 +19,7 @@ Cómo primer objetivo se espicifican  la población a quien  va dirigida la pág
 Teniendo en cuenta su realización de manera responsive.
 Basándonos en nuestros usuarios creamos un prototipo de baja fidelidad.
 Este es el proceso de nuestro prototipo.
- ![prototipoBajaProceso](C:\Users\MARY LOPEZ\DEV004-data-lovers\prototipo-baja-proceso.jpg)
+ ![prototipoBajaProceso](prototipo-baja-proceso.jpg)
 Nuestro prototipo de baja fidelidad ya definido.
  
 Teníamos como prioridad, darle la posibilidad a nuestro usuario de visualizar las tarjetas de los Pokémons, en estas darles información especifica como: 
