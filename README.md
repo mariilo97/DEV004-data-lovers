@@ -10,7 +10,8 @@ Este proyecto esta diseñado para personas con conocimiento básico de Pokémon 
 
 ## 2. Proceso de Proyecto 
 
-La organización y estructura del proyecto se determina por medio de un Trello Readme | Trello. 
+La organización y estructura del proyecto se determina por medio de un Trello https://trello.com/b/osTHmbGw/readme
+
 Cómo primer objetivo se espicifican  la población a quien  va dirigida la página, posteriormente se realizan las historias de usuarios con criterios de aceptación y término; con las siguientes funcionalidades :
 -Ordenar
 -Filtrar 
@@ -18,17 +19,22 @@ Cómo primer objetivo se espicifican  la población a quien  va dirigida la pág
 Teniendo en cuenta su realización de manera responsive.
 Basándonos en nuestros usuarios creamos un prototipo de baja fidelidad.
 Este es el proceso de nuestro prototipo.
- 
+ ![prototipoB!](http://url/IMG_20230214_104359/img.png)
 Nuestro prototipo de baja fidelidad ya definido.
  
 Teníamos como prioridad, darle la posibilidad a nuestro usuario de visualizar las tarjetas de los Pokémons, en estas darles información especifica como: 
-●Nombre de Pokémon
-● Tipo de Pokémon 
-●Estadísticas: tomando tres de estas
-◦ base-attack
-◦ base-defense
-◦ base-stamina 
-● Numero de Pokémon. 
+
+* Nombre de Pokémon
+
+* Tipo de Pokémon 
+
+* Estadísticas: tomando tres de estas
+   * base-attack
+   * base-defense
+   * base-stamina 
+
+* Numero de Pokémon. 
+
 Esto con la finalidad de que nuestro usuario tuviera suficiente información a primera vista para poder conocer lo suficiente de cada Pokémon y así reconocerlos.
 Ya teniendo esto en cuenta creamos nuestro prototipo de alta fidelidad de nuestra primera historia de usuario.
  
