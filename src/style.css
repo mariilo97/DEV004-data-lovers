@@ -49,6 +49,10 @@ nav{
     
 }
 
+#tiposLetra{
+    font-size: 14px;
+}
+
 #ordenarAlfabeticamente, #botonInicio, #top{
     padding: 5px 15px;
     color: rgb(19, 48, 73);
