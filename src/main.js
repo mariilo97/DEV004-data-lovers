@@ -1,6 +1,6 @@
 import datos from "./data/pokemon/pokemon.js";
 import { filtrarTarjetas, ordenarPokemon, mejoresPokemon } from "./data.js";
-const arregloPokemon = datos.pokemon;
+const arregloPokemon = datos.pokemon.slice(0, 49);
 
 const vistaPokemon = document.getElementById("vistaPokemon");
 
@@ -9,7 +9,7 @@ function mostrarTarjetas(arregloPokemon) {
   for (let i = 0; i < arregloPokemon.length; i++) {
     vistaPokemon.innerHTML += `<article>
     <h1>${arregloPokemon[i].name}</h1> 
-    <h2>Type:</h2>        
+    <h2 id= "tiposLetra">Type:</h2>        
     <h3>${arregloPokemon[i].type}<h3/>
     <img src="${arregloPokemon[i].img}" alt="">
     <h4>Stats</h4>
@@ -24,6 +24,7 @@ function mostrarTarjetas(arregloPokemon) {
 }
 
 const seleccionTipo = document.getElementById("tipos");
+
 seleccionTipo.addEventListener('change', function () {
   const tipoPokemon = seleccionTipo.value
   const pokemonsFiltrados = filtrarTarjetas(arregloPokemon, tipoPokemon);
@@ -47,3 +48,4 @@ topPokemon.addEventListener('click', function () {
 
 })
 mostrarTarjetas(arregloPokemon);
+

@@ -1,5 +1,4 @@
 export function filtrarTarjetas(arregloPokemon, type) {
-
   if (type === "") {
     return false;
   }
@@ -21,20 +20,16 @@ export function ordenarPokemon(arregloPokemon, name) {
   });
   if (name === "") {
     return false;
-  }
-  else if (name === 'ordenar') {
-
-
+  } else if (name === "ordenar") {
     return arraySort;
-  }
-  else {
-
-    return arraySort.reverse()
+  } else {
+    return arraySort.reverse();
   }
 }
 
 export function mejoresPokemon(arregloPokemon) {
   const topPokemon = arregloPokemon.filter((element) => {
+
     const suma =
       Number(element.stats["base-attack"]) +
       Number(element.stats["base-defense"]) +
